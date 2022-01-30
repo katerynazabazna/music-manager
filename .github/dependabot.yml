@@ -1,0 +1,79 @@
+version: 2
+updates:
+  # Project-wide
+  - package-ecosystem: maven
+    directory: "/"
+    schedule:
+      interval: daily
+      time: "04:00"
+    open-pull-requests-limit: 15
+    target-branch: main
+    reviewers:
+      - katerynazabazna
+    assignees:
+    - katerynazabazna
+
+  # Utils module
+  - package-ecosystem: maven
+    directory: "/0-mm-utils"
+    schedule:
+      interval: daily
+      time: "04:00"
+    open-pull-requests-limit: 15
+    target-branch: main
+    reviewers:
+      - katerynazabazna
+    assignees:
+      - katerynazabazna
+
+  # Domain module
+  - package-ecosystem: maven
+    directory: "/1-mm-domain"
+    schedule:
+      interval: daily
+      time: "04:00"
+    open-pull-requests-limit: 15
+    target-branch: main
+    reviewers:
+      - katerynazabazna
+    assignees:
+      - katerynazabazna
+
+  # Application module
+  - package-ecosystem: maven
+    directory: "/2-mm-application"
+    schedule:
+      interval: daily
+      time: "04:00"
+    open-pull-requests-limit: 15
+    target-branch: main
+    reviewers:
+      - katerynazabazna
+    assignees:
+      - katerynazabazna
+
+  # Plugin module
+  - package-ecosystem: maven
+    directory: "/3-mm-plugin"
+    schedule:
+      interval: daily
+      time: "04:00"
+    open-pull-requests-limit: 15
+    target-branch: main
+    reviewers:
+      - katerynazabazna
+    assignees:
+      - katerynazabazna
+
+  # Report module
+  - package-ecosystem: maven
+    directory: "/mm-report"
+    schedule:
+      interval: daily
+      time: "04:00"
+    open-pull-requests-limit: 15
+    target-branch: main
+    reviewers:
+      - katerynazabazna
+    assignees:
+      - katerynazabazna

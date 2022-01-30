@@ -1,0 +1,18 @@
+# IntelliJ
+.idea
+*.iml
+*.lst
+
+# Database
+*.db
+
+# Build outputs
+target/
+*.class
+*.jar
+
+# Coverage reports
+jacoco.xml
+
+# Application data
+data/

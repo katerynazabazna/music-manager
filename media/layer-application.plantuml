@@ -1,0 +1,42 @@
+@startuml
+
+top to bottom direction
+skinparam linetype ortho
+
+class SongBuilder {
+  + genre: Genre
+  + title: String
+  + user: User
+  + artists: List<Artist>
+  + barType: BarType
+  + bpm: float
+  + id: long
+  + withBarType(BarType): SongBuilder
+  + withGenre(Genre): SongBuilder
+  + withBpm(float): SongBuilder
+  + build(): Song
+}
+interface SongListObserver << interface >> {
+  + onSongListChanged(List<Song>): void
+}
+interface SongService << interface >> {
+  + searchSongsByTitle(String): List<Song>
+  + update(Song): void
+  + delete(Song): void
+  + create(Song): void
+  + getAllSongsForUser(): List<Song>
+}
+class SongServiceImpl {
+  + user: User
+  + songRepository: SongRepository
+  + songListObserver: SongListObserver
+  + delete(Song): void
+  + create(Song): void
+  + searchSongsByTitle(String): List<Song>
+  + update(Song): void
+  + getAllSongsForUser(): List<Song>
+}
+
+SongServiceImpl  "1" *-[#595959,plain]-> "songListObserver\n1" SongListObserver 
+SongServiceImpl   -[#008200,dashed]-^  SongService      
+@enduml
